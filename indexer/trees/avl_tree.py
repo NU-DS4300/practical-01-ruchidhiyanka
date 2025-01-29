@@ -58,6 +58,10 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         x.right = y
         y.left = z
 
+        #update heights (the height of its tallest child plus one)
+        y.height = max(self._height(y.left), self._height(y.right)) + 1
+        x.height = max(self._height(x.left), self._height(x.right)) + 1
+
         return y
 
     def _rotate_left(self, x: AVLNode) -> AVLNode:
@@ -77,6 +81,10 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         # rotate:
         y.left = x
         x.right = z
+
+        # update heights (the height of its tallest child plus one)
+        y.height = max(self._height(y.left), self._height(y.right)) + 1
+        x.height = max(self._height(x.left), self._height(x.right)) + 1
 
         return x
 
@@ -114,22 +122,28 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         # update height of the new node
         current.height = 1 + max(self._height(current.left), self._height(current.right))
 
-        #check balance of the newly added node
+        #check balance of the newly added node (left node - right node)
         balance = self._height(current.left) - self._height(current.right)
 
         # right right case
         if balance < -1 and key > current.right.key:
-
-
+            return self._rotate_left(current)
 
         # left left case
-
+        if balance > 1 and key < current.left.key:
+            return self._rotate_right(current)
 
         # right left case
-
+        if balance < -1 and key < current.right.key:
+            current.right = self._rotate_right(current.right)
+            return self._rotate_left(current)
 
         # left right case
+        if balance > 1 and key > current.left.key:
+            current.left = self._rotate_left(current.left)
+            return self._rotate_right(current)
 
+        return current
 
     def insert(self, key: Any, value: Any) -> None:
         """
