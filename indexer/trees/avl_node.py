@@ -17,3 +17,25 @@ class AVLNode(BSTNode):
     def __init__(self, key: Any):
         super().__init__(key)
         self.height: int = 1
+        self.values = []
+
+    def add_value(self, value: Any) -> None:
+        """
+        Adds a value to the node.
+
+        Parameters:
+            value (Any): The value to be added.
+
+        Returns:
+            None
+        """
+        self.values.append(value)
+
+    def get_values(self):
+        """
+        Returns the values stored in the node.
+
+        Returns:
+            list: The values stored in the node.
+        """
+        return list(self.values)

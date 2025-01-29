@@ -16,10 +16,10 @@ class AVLTreeIndex(BinarySearchTreeIndex):
             Inserts a new node with key and value into the AVL Tree
     """
     
-    def __init(self):
+    def __init__(self):
        super().__init__()
-       self.root: Optional[AVLNode] = None 
-    
+       self.root: Optional[AVLNode] = None
+
     def _height(self, node: Optional[AVLNode]) -> int:
         """
         Calculate the height of the given AVLNode.
@@ -37,6 +37,15 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         if not node:
             return 0
         return node.height
+
+    def tree_height(self) -> int:
+        """
+        User method to calculate the height of the AVL.
+
+        Returns:
+            int: The height of the AVL tree.
+        """
+        return self._tree_height(self.root)
 
     def _rotate_right(self, y: AVLNode) -> AVLNode:
         """
@@ -62,7 +71,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         y.height = max(self._height(y.left), self._height(y.right)) + 1
         x.height = max(self._height(x.left), self._height(x.right)) + 1
 
-        return y
+        return x
 
     def _rotate_left(self, x: AVLNode) -> AVLNode:
         """
@@ -86,7 +95,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         y.height = max(self._height(y.left), self._height(y.right)) + 1
         x.height = max(self._height(x.left), self._height(x.right)) + 1
 
-        return x
+        return y
 
     def _insert_recursive(self, current: Optional[AVLNode], key: Any, value: Any) -> AVLNode:
         """
@@ -147,7 +156,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
 
     def insert(self, key: Any, value: Any) -> None:
         """
-        Inserts a key-value pair into the AVL tree. If the key exists, the
+         User method to insert a key-value pair into the AVL tree. If the key exists, the
          value will be appended to the list of values in the node. 
 
         Parameters:
@@ -163,15 +172,73 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         else:
             self.root = self._insert_recursive(self.root, key, value)
 
-    # def _inorder_traversal(self, current: Optional[AVLNode], result: List[Any]) -> None:
-    #     if current is None:
-    #         return
+    def _inorder_traversal(self, current: Optional[AVLNode], result: List[Any]) -> None:
+        if current is None:
+            return
         
-    #     self._inorder_traversal(current.left, result)
-    #     result.append(current.key)
-    #     self._inorder_traversal(current.right, result)
+        self._inorder_traversal(current.left, result)
+        result.append(current.key)
+        self._inorder_traversal(current.right, result)
    
-    # def get_keys(self) -> List[Any]:
-    #     keys: List[Any] = [] 
-    #     self._inorder_traversal(self.root, keys)
-    #     return keys
+    def get_keys(self) -> List[Any]:
+        keys: List[Any] = []
+        self._inorder_traversal(self.root, keys)
+        return keys
+
+    def _search_recursive(self, node: Optional[AVLNode], key: Any) -> List[Any]:
+        """
+        Recursively searches for a node with the given key and value.
+        Args:
+            node (Optional[AVLNode]): The current node being considered during the search.
+            key (Any): The key of the target node.
+        Returns:
+            List[Any]: The list of values associated with the key, or None if not found.
+        """
+
+       # if reached leaf node, then key is not found
+        if not node:
+            return None
+        # if value matches the key, return the values associated with the key
+        if node.key == key:
+            return node.get_values()
+        # if node's value is less than target value, search the right subtree of the key
+        # otherwise, search the left
+        if node.key < key:
+            return self._search_recursive(node.right, key)
+        else:
+            return self._search_recursive(node.left, key)
+
+    def search(self, key: Any) -> List[Any]:
+        """
+        User method to search for a key in the AVL tree.
+
+        Parameters:
+            key (Any): The target key.
+
+        Returns:
+            List[Any]: The list of values associated with the key, or None if not found.
+        """
+        return self._search_recursive(self.root, key)
+
+
+    def _count_nodes(self, node: Optional[AVLNode]) -> int:
+        """
+        Recursively counts the number of nodes in the AVL tree.
+        Parameters:
+        - node (Optional[AVLNode]): The root node of the AVL tree.
+        Returns:
+        - int: The number of nodes in the AVL tree.
+        """
+
+        if node is None:
+            return 0
+        return 1 + self._count_nodes(node.left) + self._count_nodes(node.right)
+
+    def count_nodes(self) -> int:
+        """
+        User method to count the number of nodes in the AVL.
+
+        Returns:
+            int: The number of nodes in the AVL tree.
+        """
+        return self._count_nodes(self.root)
