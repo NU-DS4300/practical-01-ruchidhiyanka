@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Optional
 from indexer.trees.bst_node import BSTNode
 
 class AVLNode(BSTNode):
