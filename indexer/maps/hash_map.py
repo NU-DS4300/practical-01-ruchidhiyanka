@@ -1,7 +1,7 @@
 from indexer.abstract_index import AbstractIndex
 
 class HashMapIndex(AbstractIndex):
-    
+    #test
     def __init__(self):
         super().__init__()
         self.hash_map = {}
