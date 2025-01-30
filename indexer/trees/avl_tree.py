@@ -185,60 +185,60 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         self._inorder_traversal(self.root, keys)
         return keys
 
-    def _search_recursive(self, node: Optional[AVLNode], key: Any) -> List[Any]:
-        """
-        Recursively searches for a node with the given key and value.
-        Args:
-            node (Optional[AVLNode]): The current node being considered during the search.
-            key (Any): The key of the target node.
-        Returns:
-            List[Any]: The list of values associated with the key, or None if not found.
-        """
+    # def _search_recursive(self, node: Optional[AVLNode], key: Any) -> List[Any]:
+    #     """
+    #     Recursively searches for a node with the given key and value.
+    #     Args:
+    #         node (Optional[AVLNode]): The current node being considered during the search.
+    #         key (Any): The key of the target node.
+    #     Returns:
+    #         List[Any]: The list of values associated with the key, or None if not found.
+    #     """
+    #
+    #    # if reached leaf node, then key is not found
+    #     if not node:
+    #         return None
+    #     # if value matches the key, return the values associated with the key
+    #     if node.key == key:
+    #         return node.get_values()
+    #     # if node's value is less than target value, search the right subtree of the key
+    #     # otherwise, search the left
+    #     if node.key < key:
+    #         return self._search_recursive(node.right, key)
+    #     else:
+    #         return self._search_recursive(node.left, key)
 
-       # if reached leaf node, then key is not found
-        if not node:
-            return None
-        # if value matches the key, return the values associated with the key
-        if node.key == key:
-            return node.get_values()
-        # if node's value is less than target value, search the right subtree of the key
-        # otherwise, search the left
-        if node.key < key:
-            return self._search_recursive(node.right, key)
-        else:
-            return self._search_recursive(node.left, key)
-
-    def search(self, key: Any) -> List[Any]:
-        """
-        User method to search for a key in the AVL tree.
-
-        Parameters:
-            key (Any): The target key.
-
-        Returns:
-            List[Any]: The list of values associated with the key, or None if not found.
-        """
-        return self._search_recursive(self.root, key)
+    # def search(self, key: Any) -> List[Any]:
+    #     """
+    #     User method to search for a key in the AVL tree.
+    #
+    #     Parameters:
+    #         key (Any): The target key.
+    #
+    #     Returns:
+    #         List[Any]: The list of values associated with the key, or None if not found.
+    #     """
+    #     return self._search_recursive(self.root, key)
 
 
-    def _count_nodes(self, node: Optional[AVLNode]) -> int:
-        """
-        Recursively counts the number of nodes in the AVL tree.
-        Parameters:
-        - node (Optional[AVLNode]): The root node of the AVL tree.
-        Returns:
-        - int: The number of nodes in the AVL tree.
-        """
+    # def _count_nodes(self, node: Optional[AVLNode]) -> int:
+    #     """
+    #     Recursively counts the number of nodes in the AVL tree.
+    #     Parameters:
+    #     - node (Optional[AVLNode]): The root node of the AVL tree.
+    #     Returns:
+    #     - int: The number of nodes in the AVL tree.
+    #     """
+    #
+    #     if node is None:
+    #         return 0
+    #     return 1 + self._count_nodes(node.left) + self._count_nodes(node.right)
 
-        if node is None:
-            return 0
-        return 1 + self._count_nodes(node.left) + self._count_nodes(node.right)
-
-    def count_nodes(self) -> int:
-        """
-        User method to count the number of nodes in the AVL.
-
-        Returns:
-            int: The number of nodes in the AVL tree.
-        """
-        return self._count_nodes(self.root)
+    # def count_nodes(self) -> int:
+    #     """
+    #     User method to count the number of nodes in the AVL.
+    #
+    #     Returns:
+    #         int: The number of nodes in the AVL tree.
+    #     """
+    #     return self._count_nodes(self.root)
