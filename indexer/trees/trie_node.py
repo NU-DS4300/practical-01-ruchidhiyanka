@@ -4,8 +4,8 @@ class TrieNode:
     def __init__(self):
         self.child = [None] * 26
         self.word_end = False
-        self.doc_ids = set()
-        self.word_count: Dict[int, int] = {}
+        self.values = []
+        self.word_count = {}
 
 
 #     def add_value(self, value: Any) -> None:

@@ -6,35 +6,35 @@ class TrieIndex(AbstractIndex):
         super().__init__()
         self.root: TrieNode = TrieNode()
 
-    def insert(self, word: str, doc_id: int, count: int = 1) -> None:
+    def insert(self, key: str, value: int, count: int = 1) -> None:
         curr = self.root
-        for c in word:
+        for c in key:
             index = ord(c) - ord('a')
             if curr.child[index] is None:
                 curr.child[index] = TrieNode()
             curr = curr.child[index]
 
         curr.word_end = True
-        curr.document_ids.add(doc_id)
-        curr.word_count[doc_id] = curr.word_count.get(doc_id, 0) + count
+        curr.values.append(value)
+        curr.word_count[value] = curr.word_count.get(value, 0) + count
 
-    def search(self, word: str) -> Dict[str, Any]:
+    def search(self, key: str):
         curr = self.root
-        for c in word:
+        for c in key:
             index = ord(c) - ord('a')
             if curr.child[index] is None:
-                return {"document_count": 0, "total_word_count": 0}
+                return {"val_count": 0, "total_word_count": 0}
             curr = curr.child[index]
 
         if curr.word_end:
             return {
-                "document_count": len(curr.document_ids),
+                "val_count": len(curr.values),
                 "total_word_count": sum(curr.word_count.values()),
             }
-        return {"document_count": 0, "total_word_count": 0}
+        return {"val_count": 0, "total_word_count": 0}
 
-    def __iter__(self) -> Generator[str, None, None]:
-        def traverse(node: TrieNode, prefix: str) -> Generator[str, None, None]:
+    def __iter__(self):
+        def traverse(node: TrieNode, prefix: str):
             if node.word_end:
                 yield prefix
             for i in range(26):
@@ -42,3 +42,15 @@ class TrieIndex(AbstractIndex):
                     yield from traverse(node.child[i], prefix + chr(i + ord('a')))
 
         yield from traverse(self.root, "")
+
+    def get_keys_in_order(self):
+        """
+        Returns a list of keys in ascending order.
+
+        Returns:
+            List[Any]: A list of keys in ascending order.
+        """
+        keys = []
+        for node in self:
+            keys.append(node.key)
+        return keys
