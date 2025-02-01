@@ -3,7 +3,7 @@
 
 This is the template repository for Practical #1.
 
-#### Due Date:
+#### Due Date: 
 
 - EC Due Date: February 2nd, 2025 @ 11:59pm
 - Regular Due Date: February 4th, 2025 @ 11:59pm
