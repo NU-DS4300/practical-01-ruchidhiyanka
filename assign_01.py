@@ -10,34 +10,38 @@ def index_files(path: str, index: AbstractIndex) -> None:
     if path is not None:
         print(f"path = {path}")
 
-    # for folder in os.listdir(path):
-    #     folder_path = os.path.join(path, folder)
-    #     if os.path.isdir(folder_path):
-    for file_name in os.listdir(path):
-        file_path = os.path.join(path, file_name)
-        if os.path.isfile(file_path):
-            with open(file_path, 'r') as file:
-                # Process the file contents here
-                #file_name = "preproc-blogs_0000001.json"
-                contents = json.load(file)
+    for folder in os.listdir(path):
+        folder_path = os.path.join(path, folder)
+        if os.path.isdir(folder_path):
+            for file_name in os.listdir(folder_path):
+                file_path = os.path.join(folder_path, file_name)
+                if os.path.isfile(file_path):
+                    with open(file_path, 'r') as file:
+                        # Process the file contents here
+                        #file_name = "preproc-blogs_0000001.json"
+                        contents = json.load(file)
 
-                words = contents["preprocessed_text"]
-                for word in words:
-                    index.insert(word, file_name)
+                        # words = contents["preprocessed_text"]
+                        # for word in words:
+                        #     index.insert(word, file_name)
+                        #
+                        # title = contents["title"].split(" ")
+                        # for word in title:
+                        #     index.insert(word, file_name)
 
-                title = contents["title"].split(" ")
-                for word in title:
-                    index.insert(word, file_name)
+                        url = contents["url"]
+                        if 'http://' in url:
+                            domain = url.partition("http://")[2].partition("/")[0]
+                            index.insert(domain, file_name)
+                        else:
+                            domain = url.partition("https://")[2].partition("/")[0]
+                            index.insert(domain, file_name)
 
-                url = contents["url"]
-                domain = url.partition("www.")[2].partition(".com")[0]
-                index.insert(domain, file_name)
-
-                author = contents["author"].split(" ")[-1]
-                if author.isspace() or author == "" or author is None:
-                    pass
-                else:
-                    index.insert(author, file_name)
+                        # author = contents["author"].split(" ")[-1]
+                        # if author.isspace() or author == "" or author is None:
+                        #     pass
+                        # else:
+                        #     index.insert(author, file_name)
 
 
 
@@ -51,7 +55,7 @@ def loopy_loop():
 def main():
     # You'll need to change this to be the absolute path to the root folder
     # of the dataset
-    data_directory = "/Users/nidhibendre/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed/February2018"
+    data_directory = "/Users/nidhibendre/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed"
 
     # Here, we are creating a sample binary search tree index object
     # and sending it to the index_files function
