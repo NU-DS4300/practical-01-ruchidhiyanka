@@ -58,7 +58,7 @@ import random
 import string
 
 
-def generate_search_datasets(indexed_terms, n_values):
+def generate_dataset(indexed_terms, n):
     """
     Generates search datasets with Components A, B, C, and D.
 
@@ -66,33 +66,30 @@ def generate_search_datasets(indexed_terms, n_values):
     :param n_values: List of values for n (must be multiple of 4, >= 4000)
     :return: List of search datasets
     """
-    search_datasets = []
+    # Random sample of n indexed words
+    component_a = random.sample(indexed_terms, n)
 
-    for n in n_values:
-        assert n % 4 == 0 and n >= 4000, "n must be a multiple of 4 and at least 4000"
+    # Form (n/4) 2-3 word phrases from Component A
+    component_b = []
+    for i in range(n/4):
+        component_b.append(' '.join(random.sample(component_a, random.choice([2, 3]))))
 
-        # Component A: Random sample of n indexed words
-        component_a = random.sample(indexed_terms, n)
+    # Generate n random strings
+    component_c = []
+    for i in range(n):
+        str = ''.join(random.choices(string.printable, k = random.randint(1, 10)))
+        component_c.append(str)
 
-        # Component B: Form (n/4) 2-3 word phrases from Component A
-        component_b = [' '.join(random.sample(component_a, random.choice([2, 3]))) for _ in range(n // 4)]
+    # (n/4) 2-3 word phrases from Component C
+    component_d = []
+    for i in range(n/4):
+        component_d.append(' '.join(random.sample(component_c, random.choice([2, 3]))))
 
-        # Component C: Generate n random non-indexed strings
-        def random_string(length=8):
-            return ''.join(random.choices(string.ascii_lowercase, k=length))
+    # Combine and shuffle dataset
+    dataset = component_a + component_b + component_c + component_d
+    random.shuffle(dataset)
 
-        component_c = [random_string() for _ in range(n)]
-
-        # Component D: Form (n/4) 2-3 word phrases from Component C
-        component_d = [' '.join(random.sample(component_c, random.choice([2, 3]))) for _ in range(n // 4)]
-
-        # Combine and shuffle dataset
-        search_set = component_a + component_b + component_c + component_d
-        random.shuffle(search_set)
-
-        search_datasets.append(search_set)
-
-    return search_datasets
+    return dataset
 
 
 def main():
@@ -141,8 +138,14 @@ def main():
     # in indexer.util
     loopy_loop()
 
-    datasets = generate_search_datasets(indexed_terms, [4444, 4844, 4444, 4444, 4444, 4444, 4444, 4444])
-    for dataset in datasets:
-        print(dataset, len(dataset))
+    dataset_1 = generate_dataset(indexed_terms, 4444)
+    dataset_2 = generate_dataset(indexed_terms, 4444)
+    dataset_3 = generate_dataset(indexed_terms, 4444)
+    dataset_4 = generate_dataset(indexed_terms, 4444)
+    dataset_5 = generate_dataset(indexed_terms, 4444)
+    dataset_6 = generate_dataset(indexed_terms, 4444)
+    dataset_7 = generate_dataset(indexed_terms, 4444)
+    dataset_8 = generate_dataset(indexed_terms, 4444)
+
 if __name__ == "__main__":
     main()
