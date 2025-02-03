@@ -1,8 +1,9 @@
 from indexer.abstract_index import AbstractIndex
+import hashlib
 
 class HashMapIndex(AbstractIndex):
     def __init__(self, size=128):
-        # initialize size to highest possible number based on number of ASCII characters (128)
+        # initialize size to largest possible number based on number of ASCII characters (128)
         self.size = size
         self.hash_map = self.create_buckets()
 
@@ -12,13 +13,16 @@ class HashMapIndex(AbstractIndex):
             buckets.append([])
         return buckets
 
-    def _get_bucket(self, term):
-        hash_key = hash(term) % self.size
+    def custom_hash_fx(self, term):
+        return int(hashlib.sha256(term.encode('utf-8')).hexdigest(), 16)
+
+    def get_bucket(self, term):
+        hash_key = (self.custom_hash_fx(term)) % self.size
         bucket = self.hash_map[hash_key]
         return bucket
 
     def insert(self, term, document_id):
-        bucket = self._get_bucket(term)
+        bucket = self.get_bucket(term)
         for pair in bucket:
             if pair["term"] == term:
                 if document_id not in pair["doc_ids"]:
@@ -27,14 +31,14 @@ class HashMapIndex(AbstractIndex):
         bucket.append({"term": term, "doc_ids": [document_id]})
 
     def search(self, term):
-        bucket = self._get_bucket(term)
+        bucket = self.get_bucket(term)
         for tm, doc_ids in bucket:
             if tm == term:
                 return doc_ids
         return []
 
     def remove(self, term):
-        bucket = self._get_bucket(term)
+        bucket = self.get_bucket(term)
         for pair in bucket:
             if pair[0] == term:
                 bucket.remove(pair)

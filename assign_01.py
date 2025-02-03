@@ -8,7 +8,6 @@ import os
 import string
 
 def index_files(path: str, index: AbstractIndex) -> None:
-    # path should contain the location of the news articles you want to parse
     if path is not None:
         print(f"path = {path}")
 
@@ -57,28 +56,22 @@ def loopy_loop():
 
 
 def main():
-    # You'll need to change this to be the absolute path to the root folder
-    # of the dataset
+    # You'll need to change this to be the absolute path to the root folder of the dataset
     data_directory = "/Users/priyankaadhikari/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed/April2018"
 
-    # Here, we are creating a sample binary search tree index object
-    # and sending it to the index_files function
-    bst_index = BinarySearchTreeIndex()
-    index_files(data_directory, bst_index)
+    # Create a sample binary search tree index object and index the files
+    # bst_index = BinarySearchTreeIndex()
+    # index_files(data_directory, bst_index)
+    #
+    # # Print the keys that were added to the index in order
+    # print(bst_index.get_keys_in_order())
 
-    # As a gut check, we are printing the keys that were added to the
-    # index in order.
-    print(bst_index.get_keys_in_order())
-
-    # Test Hash Map Index
+    # Test the Hash Map Indexing & print the hash map contents
     hash_map_index = HashMapIndex()
     index_files(data_directory, hash_map_index)
-
-    # print the hash map contents
     print(hash_map_index.print_hashmap())
 
-    # quick demo of how to use the timing decorator included
-    # in indexer.util
+    # quick demo of how to use the timing decorator included in indexer.util
     loopy_loop()
 
 
@@ -87,14 +80,8 @@ def main():
     # avl_index = AVLTreeIndex()
     # index_files(data_directory, avl_index)
     #
-    # # As a gut check, we are printing the keys that were added to the
-    # # index in order.
+    # Print the keys that were added to the index in order
     # print(avl_index.get_keys_in_order())
-    #
-    # # quick demo of how
-    # # to use the timing decorator included
-    # # in indexer.util
-    # loopy_loop()
 
 
 if __name__ == "__main__":
