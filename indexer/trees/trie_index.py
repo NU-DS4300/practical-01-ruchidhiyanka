@@ -12,21 +12,21 @@ class TrieIndex(AbstractIndex):
             curr = curr.child[c]
         curr.word_end = True
         curr.values.append(value)
-        curr.word_count[value] = curr.word_count.get(value, 0) + count
+        #curr.word_count[value] = curr.word_count.get(value, 0) + count
 
     def search(self, key: str):
         curr = self.root
         for c in key:
             if c not in curr.child:
-                return {"val_count": 0, "total_word_count": 0}
+                return {'key': key, "val_count": 0}
             curr = curr.child[c]
 
         if curr.word_end:
-            return {
-                "val_count": len(curr.values),
-                "total_word_count": sum(curr.word_count.values()),
-            }
-        return {"val_count": 0, "total_word_count": 0}
+            return {'key': key, "val_count": len(curr.values)}
+            #     "val_count": len(curr.values),
+            #     "total_word_count": sum(curr.word_count.values()),
+            # }
+        return {'key': key, "val_count": 0}
 
     def __iter__(self):
         def traverse(node: TrieNode, prefix: str):

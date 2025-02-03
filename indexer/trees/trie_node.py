@@ -7,7 +7,7 @@ class TrieNode:
         self.child = defaultdict(TrieNode)
         self.word_end = False
         self.values = []
-        self.word_count = {}
+        #self.word_count = {}
 
 
 #     def add_value(self, value: Any) -> None:

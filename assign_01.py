@@ -4,9 +4,23 @@ from indexer.trees.bst_index import BinarySearchTreeIndex
 from indexer.util.timer import timer
 from indexer.abstract_index import AbstractIndex
 from indexer.trees.trie_index import TrieIndex
-
+import random
+import string
 import os
+from indexer.util.parser_utils import preprocess_text
+import pickle
 
+DATASET_PICKLE_FILE = "datasets.pkl"
+
+def save_datasets(datasets, filename=DATASET_PICKLE_FILE):
+    with open(filename, "wb") as f:
+        pickle.dump(datasets, f)
+
+def load_datasets(filename=DATASET_PICKLE_FILE):
+    if os.path.exists(filename):
+        with open(filename, "rb") as f:
+            return pickle.load(f)
+    return None
 def index_files(path: str, index: AbstractIndex) -> None:
     # path should contain the location of the news articles you want to parse
     if path is not None:
@@ -29,7 +43,8 @@ def index_files(path: str, index: AbstractIndex) -> None:
 
                         title = contents["title"].split(" ")
                         for word in title:
-                            index.insert(word, file_name)
+                            word_processed = preprocess_text(word)
+                            index.insert(word_processed, file_name)
 
                         url = contents["url"]
                         if 'http://' in url:
@@ -45,33 +60,13 @@ def index_files(path: str, index: AbstractIndex) -> None:
                         else:
                             index.insert(author, file_name)
 
-
-
-
-# A simple demo of how the @timer decoration can be used
-@timer
-def loopy_loop():
-    total = sum((x for x in range(0, 1000000)))
-
-
-import random
-import string
-
-
 def generate_dataset(indexed_terms, n):
-    """
-    Generates search datasets with Components A, B, C, and D.
-
-    :param indexed_terms: Set of words currently indexed
-    :param n_values: List of values for n (must be multiple of 4, >= 4000)
-    :return: List of search datasets
-    """
     # Random sample of n indexed words
     component_a = random.sample(indexed_terms, n)
 
     # Form (n/4) 2-3 word phrases from Component A
     component_b = []
-    for i in range(n/4):
+    for i in range(n//4):
         component_b.append(' '.join(random.sample(component_a, random.choice([2, 3]))))
 
     # Generate n random strings
@@ -82,7 +77,7 @@ def generate_dataset(indexed_terms, n):
 
     # (n/4) 2-3 word phrases from Component C
     component_d = []
-    for i in range(n/4):
+    for i in range(n//4):
         component_d.append(' '.join(random.sample(component_c, random.choice([2, 3]))))
 
     # Combine and shuffle dataset
@@ -90,7 +85,28 @@ def generate_dataset(indexed_terms, n):
     random.shuffle(dataset)
 
     return dataset
+@timer
+def search_dataset(term, index_type):
+    return index_type.search(term)
 
+timed_results = {}
+def experiment_run(index_type, datasets):
+    i = 1
+    for dataset in datasets:
+        search_terms = random.sample(dataset, 4)
+        for idx, word in enumerate(dataset):
+            index_type.insert(word, idx)
+
+        results = []
+        for term in search_terms:
+            total_time = 0
+            for test in range(6):
+                result, time_ns = search_dataset(term, index_type)
+                total_time += time_ns
+            results.append((total_time/5))
+        timed_results[f'dataset_{i}'] = results
+        i += 1
+    return timed_results
 
 def main():
     # You'll need to change this to be the absolute path to the root folder
@@ -105,11 +121,6 @@ def main():
     # # As a gut check, we are printing the keys that were added to the
     # # index in order.
     # print(bst_index.get_keys_in_order())
-    #
-    # # quick demo of how to use the timing decorator included
-    # # in indexer.util
-    # loopy_loop()
-
 
     # #avl
     # print('avl')
@@ -119,11 +130,6 @@ def main():
     # # As a gut check, we are printing the keys that were added to the
     # # index in order.
     # print(avl_index.get_keys_in_order())
-    #
-    # # quick demo of how
-    # # to use the timing decorator included
-    # # in indexer.util
-    # loopy_loop()
 
     #trie
     trie_index = TrieIndex()
@@ -133,19 +139,24 @@ def main():
     # index in order.
     indexed_terms = trie_index.get_keys_in_order()
 
-    # quick demo of how
-    # to use the timing decorator included
-    # in indexer.util
-    loopy_loop()
+    # Try to load datasets from pickle
+    datasets = load_datasets()
 
-    dataset_1 = generate_dataset(indexed_terms, 4444)
-    dataset_2 = generate_dataset(indexed_terms, 4804)
-    dataset_3 = generate_dataset(indexed_terms, 5224)
-    dataset_4 = generate_dataset(indexed_terms, 5600)
-    dataset_5 = generate_dataset(indexed_terms, 4008)
-    dataset_6 = generate_dataset(indexed_terms, 4488)
-    dataset_7 = generate_dataset(indexed_terms, 4004)
-    dataset_8 = generate_dataset(indexed_terms, 4808)
+    if datasets is None:
+        datasets = [generate_dataset(indexed_terms, size) for size in [4444, 4804, 5224, 5600, 4008, 4488, 4004, 4808]]
+        save_datasets(datasets)
+
+    trie_index = TrieIndex()
+    bst_index = BinarySearchTreeIndex()
+    avl_index = AVLTreeIndex()
+    data_structures = [trie_index, bst_index, avl_index]
+
+    index_type_results = {}
+    for index_type in data_structures:
+        timed_results = experiment_run(index_type, datasets)
+        index_type_results[index_type] = timed_results
+
+    print(index_type_results)
 
 if __name__ == "__main__":
     main()
