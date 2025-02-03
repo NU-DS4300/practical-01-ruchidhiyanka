@@ -19,16 +19,16 @@ def preprocess_text(text: str) -> List[str]:
     List[str]: The list of preprocessed tokens.
   """
   # Call helper function to initialize nltk modules
-  nltk_modules.init_nltk_modules()
+  # nltk_modules.init_nltk_modules()
   
   # Split the text into words
   words = text.split()
 
   # Initialize the lemmatizer
-  lemmatizer = WordNetLemmatizer()
+  # lemmatizer = WordNetLemmatizer()
 
   # Initialize the set of stop words
-  stop_words = set(stopwords.words('english'))
+  # stop_words = set(stopwords.words('english'))
 
   # Initialize the set of punctuation
   punctuation = set(string.punctuation)
@@ -39,15 +39,15 @@ def preprocess_text(text: str) -> List[str]:
   # Iterate over each word
   for word in words:
     # Lemmatize the word
-    lemma = lemmatizer.lemmatize(word)
+    # lemma = lemmatizer.lemmatize(word)
 
     # Remove punctuation
-    lemma = ''.join(char for char in lemma if char not in punctuation)
+    word = ''.join(char for char in word if char not in punctuation)
 
     # Remove tokens composed of only digits or digits + decimal points
-    if not lemma.replace('.', '', 1).isdigit():
+    if not word.replace('.', '', 1).isdigit():
       # Remove stop words
-      if lemma.lower() not in stop_words:
-        preprocessed_tokens.append(lemma)
+      # if lemma.lower() not in stop_words:
+        preprocessed_tokens.append(word.lower())
 
   return preprocessed_tokens
