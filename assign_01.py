@@ -1,47 +1,51 @@
 import json
 from indexer.trees.avl_tree import AVLTreeIndex
 from indexer.trees.bst_index import BinarySearchTreeIndex
+from indexer.maps.hash_map import HashMapIndex
 from indexer.util.timer import timer
 from indexer.abstract_index import AbstractIndex
 import os
+import string
 
 def index_files(path: str, index: AbstractIndex) -> None:
     # path should contain the location of the news articles you want to parse
     if path is not None:
         print(f"path = {path}")
 
-    for folder in os.listdir(path):
-        folder_path = os.path.join(path, folder)
-        if os.path.isdir(folder_path):
-            for file_name in os.listdir(folder_path):
-                file_path = os.path.join(folder_path, file_name)
-                if os.path.isfile(file_path):
-                    with open(file_path, 'r') as file:
-                        # Process the file contents here
-                        #file_name = "preproc-blogs_0000001.json"
-                        contents = json.load(file)
+    # for folder in os.listdir(path):
+    # folder_path = os.path.join(path, folder)
+    folder_path = path
+    if os.path.isdir(folder_path):
+        for file_name in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, file_name)
+            if os.path.isfile(file_path):
+                with open(file_path, 'r') as file:
+                    # Process the file contents here
+                    contents = json.load(file)
 
-                        # words = contents["preprocessed_text"]
-                        # for word in words:
-                        #     index.insert(word, file_name)
-                        #
-                        # title = contents["title"].split(" ")
-                        # for word in title:
-                        #     index.insert(word, file_name)
+                    words = contents["preprocessed_text"]
+                    for word in words:
+                        index.insert(word, file_name)
 
-                        url = contents["url"]
-                        if 'http://' in url:
-                            domain = url.partition("http://")[2].partition("/")[0]
-                            index.insert(domain, file_name)
-                        else:
-                            domain = url.partition("https://")[2].partition("/")[0]
-                            index.insert(domain, file_name)
+                    title = contents["title"].split(" ")
+                    for word in title:
+                        word_clean = word.strip(string.punctuation)
+                        index.insert(word_clean, file_name)
 
-                        # author = contents["author"].split(" ")[-1]
-                        # if author.isspace() or author == "" or author is None:
-                        #     pass
-                        # else:
-                        #     index.insert(author, file_name)
+                    url = contents["url"]
+                    if 'http://' in url:
+                        domain = url.partition("http://")[2].partition("/")[0]
+                        index.insert(domain, file_name)
+                    else:
+                        domain = url.partition("https://")[2].partition("/")[0]
+                        index.insert(domain, file_name)
+
+                    author = contents["author"].split(" ")[-1]
+                    if author.isspace() or author == "" or author is None:
+                        pass
+                    else:
+                        author_clean = author.strip(string.punctuation)
+                        index.insert(author_clean, file_name)
 
 
 
@@ -55,7 +59,7 @@ def loopy_loop():
 def main():
     # You'll need to change this to be the absolute path to the root folder
     # of the dataset
-    data_directory = "/Users/nidhibendre/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed"
+    data_directory = "/Users/priyankaadhikari/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed/April2018"
 
     # Here, we are creating a sample binary search tree index object
     # and sending it to the index_files function
@@ -65,6 +69,13 @@ def main():
     # As a gut check, we are printing the keys that were added to the
     # index in order.
     print(bst_index.get_keys_in_order())
+
+    # Test Hash Map Index
+    hash_map_index = HashMapIndex()
+    index_files(data_directory, hash_map_index)
+
+    # print the hash map contents
+    print(hash_map_index.print_hashmap())
 
     # quick demo of how to use the timing decorator included
     # in indexer.util
