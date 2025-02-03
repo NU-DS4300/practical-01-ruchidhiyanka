@@ -49,8 +49,8 @@ def index_files(path: str, index: AbstractIndex) -> None:
 
                         title = contents["title"].split(" ")
                         for word in title:
-                            word_processed = preprocess_text(word)
-                            index.insert(word_processed, file_name)
+                            word_clean = word.strip(string.punctuation)
+                        index.insert(word_clean, file_name)
 
                         url = contents["url"]
                         if 'http://' in url:
@@ -64,7 +64,8 @@ def index_files(path: str, index: AbstractIndex) -> None:
                         if author.isspace() or author == "" or author is None:
                             pass
                         else:
-                            index.insert(author, file_name)
+                            author_clean = author.strip(string.punctuation)
+                            index.insert(author_clean, file_name)
 
 def generate_dataset(indexed_terms, n):
     # Random sample of n indexed words
