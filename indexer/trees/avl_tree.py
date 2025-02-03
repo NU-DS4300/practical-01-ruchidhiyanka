@@ -32,7 +32,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
             - int: The height of the AVLNode. If the node is None, returns 0.
             """
 
-
+            #test
             if not node:
                 return 0
             return node.height
