@@ -19,24 +19,23 @@ class AVLTreeIndex(BinarySearchTreeIndex):
     def __init__(self):
        super().__init__()
        self.root: Optional[AVLNode] = None
+       self.height = 1
 
-    def _height(self, node: Optional[AVLNode]) -> int:
-        """
-        Calculate the height of the given AVLNode.
+    def _tree_height(self, node: Optional[AVLNode]) -> int:
+            """
+            Calculate the height of the given AVLNode.
 
-        Parameters:
-        - node: The AVLNode for which to calculate the height.
+            Parameters:
+            - node: The AVLNode for which to calculate the height.
 
-        Returns:
-        - int: The height of the AVLNode. If the node is None, returns 0.
-        """
-        
-        # TODO: make sure to update height appropriately in the
-        # recursive insert function.
-        
-        if not node:
-            return 0
-        return node.height
+            Returns:
+            - int: The height of the AVLNode. If the node is None, returns 0.
+            """
+
+
+            if not node:
+                return 0
+            return node.height
 
     def tree_height(self) -> int:
         """
@@ -46,6 +45,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
             int: The height of the AVL tree.
         """
         return self._tree_height(self.root)
+
 
     def _rotate_right(self, y: AVLNode) -> AVLNode:
         """
@@ -57,8 +57,6 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         Returns:
             AVLNode: The new root of the rotated subtree.
         """
-        
-        # TODO: implement the right rotation for AVL Tree
 
         x = y.left
         z = x.right
@@ -68,8 +66,8 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         y.left = z
 
         #update heights (the height of its tallest child plus one)
-        y.height = max(self._height(y.left), self._height(y.right)) + 1
-        x.height = max(self._height(x.left), self._height(x.right)) + 1
+        y.height = max(self._tree_height(y.left), self._tree_height(y.right)) + 1
+        x.height = max(self._tree_height(x.left), self._tree_height(x.right)) + 1
 
         return x
 
@@ -81,8 +79,6 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         Returns:
             AVLNode: The new root of the subtree after rotation.
         """
-        
-        # TODO: implement the left rotation for AVL Tree
 
         y = x.right
         z = y.left
@@ -92,10 +88,16 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         x.right = z
 
         # update heights (the height of its tallest child plus one)
-        y.height = max(self._height(y.left), self._height(y.right)) + 1
-        x.height = max(self._height(x.left), self._height(x.right)) + 1
+        y.height = max(self._tree_height(y.left), self._tree_height(y.right)) + 1
+        x.height = max(self._tree_height(x.left), self._tree_height(x.right)) + 1
 
         return y
+
+
+    def _get_balance(self, node):
+        if not node:
+            return 0
+        return self._tree_height(node.left) - self._tree_height(node.right)
 
     def _insert_recursive(self, current: Optional[AVLNode], key: Any, value: Any) -> AVLNode:
         """
@@ -107,16 +109,9 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         Returns:
             AVLNode: The updated AVL tree with the new node inserted.
         """
-        # TODO: Implement a proper recursive insert function for an
-        # AVL tree including updating height and balancing if a
-        # new node is inserted. 
-        
-        # TODO: Remove or comment out this line once you've implemented
-        # the AVL insert functionality 
-        #current = super()._insert_recursive(current, key, value)
 
         # normal BST insert
-        if not current:
+        if current is None:
             node = AVLNode(key)
             node.add_value(value)
             return node
@@ -129,26 +124,30 @@ class AVLTreeIndex(BinarySearchTreeIndex):
             return current
 
         # update height of the new node
-        current.height = 1 + max(self._height(current.left), self._height(current.right))
+        current.height = 1 + max(self._tree_height(current.left), self._tree_height(current.right))
 
         #check balance of the newly added node (left node - right node)
-        balance = self._height(current.left) - self._height(current.right)
+        balance = self._get_balance(current)
 
         # right right case
-        if balance < -1 and key > current.right.key:
+        if balance < -1 and current.right is not None and key > current.right.key:
+            # print(f"Right-Right case detected at node {current.key}, rotating left.")
             return self._rotate_left(current)
 
         # left left case
-        if balance > 1 and key < current.left.key:
+        if balance > 1 and current.left is not None and key < current.left.key:
+            # print(f"Left-Left case detected at node {current.key}, rotating right.")
             return self._rotate_right(current)
 
         # right left case
-        if balance < -1 and key < current.right.key:
+        if balance < -1 and current.right is not None and key < current.right.key:
+            # print(f"Right-Left case detected at node {current.key}, rotating right then left.")
             current.right = self._rotate_right(current.right)
             return self._rotate_left(current)
 
         # left right case
-        if balance > 1 and key > current.left.key:
+        if balance > 1 and current.left is not None and key > current.left.key:
+            # print(f"Left-Right case detected at node {current.key}, rotating left then right.")
             current.left = self._rotate_left(current.left)
             return self._rotate_right(current)
 
