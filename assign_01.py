@@ -4,13 +4,19 @@ from indexer.trees.bst_index import BinarySearchTreeIndex
 from indexer.util.timer import timer
 from indexer.abstract_index import AbstractIndex
 from indexer.trees.trie_index import TrieIndex
+from indexer.maps.hash_map import HashMapIndex
 import random
 import string
 import os
-from indexer.util.parser_utils import preprocess_text
 import pickle
+import csv
 
 DATASET_PICKLE_FILE = "datasets.pkl"
+TIMING_CSV_FILE = "timing_data/timing_data.csv"
+SEARCH_RESULTS_DIR = "search_results/"
+
+os.makedirs("timing_data", exist_ok=True)
+os.makedirs(SEARCH_RESULTS_DIR, exist_ok=True)
 
 def save_datasets(datasets, filename=DATASET_PICKLE_FILE):
     with open(filename, "wb") as f:
@@ -29,13 +35,13 @@ def index_files(path: str, index: AbstractIndex) -> None:
     for folder in os.listdir(path):
         folder_path = os.path.join(path, folder)
         if os.path.isdir(folder_path):
-            for file_name in os.listdir(folder_path):
-                file_path = os.path.join(folder_path, file_name)
-                if os.path.isfile(file_path):
-                    with open(file_path, 'r') as file:
-                        # Process the file contents here
-                        #file_name = "preproc-blogs_0000001.json"
-                        contents = json.load(file)
+            for file_name in os.listdir(path):
+                file_path = os.path.join(path, file_name)
+                # skip over hidden, non-json file in folder called ".DS_Store"
+                if os.path.isfile(file_path) and ".DS_Store" not in file_path:
+                    with open(file_path, 'r') as f:
+                        #print(file_path)
+                        contents = json.load(f)
 
                         words = contents["preprocessed_text"]
                         for word in words:
@@ -43,8 +49,9 @@ def index_files(path: str, index: AbstractIndex) -> None:
 
                         title = contents["title"].split(" ")
                         for word in title:
-                            word_processed = preprocess_text(word)
-                            index.insert(word_processed, file_name)
+                            word_clean = word.strip(string.punctuation)
+                            word_clean = word_clean.lower()
+                            index.insert(word_clean, file_name)
 
                         url = contents["url"]
                         if 'http://' in url:
@@ -58,7 +65,9 @@ def index_files(path: str, index: AbstractIndex) -> None:
                         if author.isspace() or author == "" or author is None:
                             pass
                         else:
-                            index.insert(author, file_name)
+                            author_clean = author.strip(string.punctuation)
+                            index.insert(author_clean, file_name)
+
 
 def generate_dataset(indexed_terms, n):
     # Random sample of n indexed words
@@ -108,55 +117,55 @@ def experiment_run(index_type, datasets):
         i += 1
     return timed_results
 
-def main():
-    # You'll need to change this to be the absolute path to the root folder
-    # of the dataset
-    data_directory = "/Users/ruchirabanerjee/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed"
+def write_csv(data, filename=TIMING_CSV_FILE):
+    file_exists = os.path.exists(filename)
 
-    # Here, we are creating a sample binary search tree index object
-    # and sending it to the index_files function
+    with open(filename, mode='a', newline='') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow([
+                "run_id", "compute_proc_type", "primary_memory_size", "index_type",
+                "num_docs_indexed", "num_tokens_indexed", "search_set_base_size", "search_time"
+            ])
+        writer.writerows(data)
+
+def main():
+    # change to command line
+    data_directory = "/Users/nidhibendre/Documents/ds4300/practical-01-ruchidhiyanka/data/P01-verify-dataset"
+
+
     # bst_index = BinarySearchTreeIndex()
     # index_files(data_directory, bst_index)
-    #
-    # # As a gut check, we are printing the keys that were added to the
-    # # index in order.
-    # print(bst_index.get_keys_in_order())
+    #print(bst_index.get_keys_in_order())
 
-    # #avl
+    #avl
     # print('avl')
     # avl_index = AVLTreeIndex()
     # index_files(data_directory, avl_index)
+    #print(avl_index.get_keys_in_order())
+
+     # trie
+    # trie_index = TrieIndex()
+    # index_files(data_directory, trie_index)
+    #indexed_terms = bst_index.get_keys_in_order()
+    # print(trie_index.get_keys_in_order())
+
+
+    # # hashmap
+    # hash_map_index = HashMapIndex()
+    # index_files(data_directory, hash_map_index)
+    # print(hash_map_index.print_hashmap())
+
+    # datasets = load_datasets()
+    # n_ls = [4444, 4804, 5224, 5600, 4008, 4488, 4004, 4808]
+    # if datasets is None:
+    #  datasets = [generate_dataset(indexed_terms, size) for size in n_ls]
+    #  save_datasets(datasets)
+    # data_structures = {'BST': BinarySearchTreeIndex(), 'AVL': AVLTreeIndex()}
     #
-    # # As a gut check, we are printing the keys that were added to the
-    # # index in order.
-    # print(avl_index.get_keys_in_order())
-
-    #trie
-    trie_index = TrieIndex()
-    index_files(data_directory, trie_index)
-
-    # As a gut check, we are printing the keys that were added to the
-    # index in order.
-    indexed_terms = trie_index.get_keys_in_order()
-
-    # Try to load datasets from pickle
-    datasets = load_datasets()
-
-    if datasets is None:
-        datasets = [generate_dataset(indexed_terms, size) for size in [4444, 4804, 5224, 5600, 4008, 4488, 4004, 4808]]
-        save_datasets(datasets)
-
-    trie_index = TrieIndex()
-    bst_index = BinarySearchTreeIndex()
-    avl_index = AVLTreeIndex()
-    data_structures = [trie_index, bst_index, avl_index]
-
-    index_type_results = {}
-    for index_type in data_structures:
-        timed_results = experiment_run(index_type, datasets)
-        index_type_results[index_type] = timed_results
-
-    print(index_type_results)
+    #
+    # csv_data, search_results = experiment_run(data_structures, datasets)
+    # write_csv(csv_data)
 
 if __name__ == "__main__":
     main()
