@@ -13,7 +13,7 @@ import csv
 import argparse
 
 
-DATASET_PICKLE_FILE = "datasets.pkl"
+DATASET_PICKLE_FILE = args.pickled
 TIMING_CSV_FILE = "timing_data/timing_data.csv"
 SEARCH_RESULTS_DIR = "search_results/"
 
@@ -141,12 +141,11 @@ def write_csv(data, filename=TIMING_CSV_FILE):
 
 def main():
     # Parse command-line arguments
-    # parser = argparse.ArgumentParser(description="Index files and run search experiments.")
-    # parser.add_argument("-d", "--dataset", required=True, help="Path to the dataset directory")
-    # args = parser.parse_args()
-    # change to command line
-    #data_directory = args.dataset
-    data_directory = "/Users/priyankaadhikari/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed"
+    parser = argparse.ArgumentParser(description="Index files and run search experiments.")
+    parser.add_argument("-d", "--dataset", required=True, help="Path to the dataset directory")
+    parser.add_argument("-p", "--pickled", required=True, help="Path to the pickled search datasets directory")
+    args = parser.parse_args()
+    data_directory = args.dataset
 
     # index data into all structures
     bst_index = BinarySearchTreeIndex()
@@ -172,13 +171,16 @@ def main():
     data_structures = {'BST': bst_index, 'AVL': avl_index,
                        'Trie': trie_index, 'Hash Map': hash_map_index}
     print("Datasets loaded")
-    specified_search_terms = ['Northeastern', 'Beanpot', 'Husky']
-    specified_search_terms_documents = dict()
-    for structure in data_structures:
-        for term in specified_search_terms:
-            docs = data_structures[structure].search(term)
-            specified_search_terms_documents[structure] = docs
-    print(specified_search_terms_documents)
+
+    # results of below are copied and pasted in the file "Add_results_of_specific_searches_here" under search results
+    # commented out so experiments can be performed faster on the main dataset
+    # specified_search_terms = ['Northeastern', 'Beanpot', 'Husky']
+    # specified_search_terms_documents = dict()
+    # for structure in data_structures:
+    #     for term in specified_search_terms:
+    #         docs = data_structures[structure].search(term)
+    #         specified_search_terms_documents[structure] = docs
+    # print(specified_search_terms_documents)
 
     csv_data = experiment_runs(data_structures, datasets, n_ls, 'Apple M3', '16 GB')
     write_csv(csv_data)
