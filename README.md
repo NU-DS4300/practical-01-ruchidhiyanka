@@ -59,7 +59,7 @@ practical-01-ruchidhiyanka/
 
 ## Output Files
 - **Timing Data**: `timing_data/timing_data.csv` (search performance metrics)
-- **Search Results**: `search_results/Add_results_of_specific_searches_here` (individual search result files)
+- **Search Results**: `search_results/results_of_specific_searches_here` (individual search result files)
 - **Generated Datasets**: `datasets.pkl` (pickled test datasets)
 
 ## Notes
