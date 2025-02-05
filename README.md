@@ -29,8 +29,6 @@ practical-01-ruchidhiyanka/
 │   │   ├── parser_utils.py
 │   │   ├── timer.py
 │   ├── abstract_index.py
-│── timing_data/
-│   │   ├── timing_data.csv
 │── search_results/
 │   │   ├── results_of_specific_searches_here
 │── tests/
