@@ -6,7 +6,7 @@ This program indexes financial news articles using different indexing data struc
 ## Installation and Setup
 ### Prerequisites
 - Python 3.11
-- Required libraries: `json`, `pickle`, `csv`, `random`, `string`, `os`, `hashlib`, `argparse`, `typing`, `time`
+- Required libraries: `json`, `pickle`, `csv`, `random`, `string`, `os`, `hashlib`, `argparse`, `typing`, `time`, `jupyter`, `jupyterlab`
 - The dataset of preprocessed news articles
 
 ### Directory Structure
