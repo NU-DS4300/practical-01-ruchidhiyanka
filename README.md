@@ -25,14 +25,22 @@ practical-01-ruchidhiyanka/
 │   │   ├── trie_index.py
 │   │   ├── trie_node.py
 │   ├── util/
+│   │   ├── nltk_modules.py
 │   │   ├── parser_utils.py
 │   │   ├── timer.py
 │   ├── abstract_index.py/
 │── timing_data/
 │   │   ├── timing_data.csv
 │── search_results/
-│── datasets.pkl
+│   │   ├── results_of_specific_searches_here
+│── tests/
+│   │   ├── test_bin_search_tree.py
+│── timing_data/
+│   │   ├── Timing_Data_Visualizations.ipynb
+│   │   ├── timing_data.csv
+│── README.md
 │── assign_01.py
+│── requirements.txt
 ```
 
 ## Execution Instructions
