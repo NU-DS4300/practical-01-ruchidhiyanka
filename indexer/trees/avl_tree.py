@@ -30,6 +30,8 @@ class AVLTreeIndex(BinarySearchTreeIndex):
             Returns:
             - int: The height of the AVLNode. If the node is None, returns 0.
             """
+            if node is None:
+                node = self.root
             if not node:
                 return -1
             return node.height
@@ -172,5 +174,7 @@ class AVLTreeIndex(BinarySearchTreeIndex):
         keys: List[Any] = []
         self._inorder_traversal(self.root, keys)
         return keys
+
+
 
 

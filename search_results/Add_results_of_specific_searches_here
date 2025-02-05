@@ -1,0 +1,4 @@
+{'BST': ['preproc-news_0034466.json', 'preproc-news_0002807.json', 'preproc-news_0001728.json', 'preproc-news_0056098.json'],
+'AVL': ['preproc-news_0034466.json', 'preproc-news_0002807.json', 'preproc-news_0001728.json', 'preproc-news_0056098.json'],
+'Trie': ['preproc-news_0034466.json', 'preproc-news_0002807.json', 'preproc-news_0001728.json', 'preproc-news_0056098.json'],
+'Hash Map': ['preproc-news_0034466.json', 'preproc-news_0002807.json', 'preproc-news_0001728.json', 'preproc-news_0056098.json']}
