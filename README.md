@@ -1,7 +1,7 @@
 # DS4300 - Spring 2025 - Practical #1 - Index It
 
 ## Overview
-This program indexes financial news articles using different indexing data structures, including a Trie, Binary Search Tree (BST), Hash Map, and an AVL Tree. It processes preprocessed text files, inserts words into an index, and performs searches to measure the most efficient data structures to store and search for this data.
+This program indexes financial news articles using different indexing data structures, including a Binary Search Tree (BST), an AVL Tree, a Hash Map, and a Trie (Prefix) Tree. It processes preprocessed text files, inserts words into an index, and performs searches to measure the most efficient data structures to store and search for this data.
 
 ## Installation and Setup
 ### Prerequisites
