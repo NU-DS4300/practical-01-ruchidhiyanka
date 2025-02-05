@@ -13,6 +13,7 @@ class HashMapIndex(AbstractIndex):
             buckets.append([])
         return buckets
 
+    #  create custom hash function for reproducibility of hash values
     def custom_hash_fx(self, term):
         return int(hashlib.sha256(term.encode('utf-8')).hexdigest(), 16)
 
