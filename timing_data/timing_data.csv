@@ -1,0 +1,481 @@
+run_id,compute_proc_type,primary_memory_size,index_type,term,num_docs_indexed,num_tokens_indexed,search_set_base_size,search_time
+1,Apple M2,8 GB,BST,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,8000
+2,Apple M2,8 GB,BST,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,4000
+3,Apple M2,8 GB,BST,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,3000
+4,Apple M2,8 GB,BST,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,2000
+5,Apple M2,8 GB,BST,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,3000
+6,Apple M2,8 GB,AVL,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,1131000
+7,Apple M2,8 GB,AVL,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,10000
+8,Apple M2,8 GB,AVL,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,5000
+9,Apple M2,8 GB,AVL,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,5000
+10,Apple M2,8 GB,AVL,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,3000
+11,Apple M2,8 GB,Trie,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,354000
+12,Apple M2,8 GB,Trie,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,2000
+13,Apple M2,8 GB,Trie,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,2000
+14,Apple M2,8 GB,Trie,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,1000
+15,Apple M2,8 GB,Trie,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,2000
+16,Apple M2,8 GB,Hash Map,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,47000
+17,Apple M2,8 GB,Hash Map,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,6000
+18,Apple M2,8 GB,Hash Map,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,4000
+19,Apple M2,8 GB,Hash Map,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,3000
+20,Apple M2,8 GB,Hash Map,"['eurodominance', 'restoring debswana', ""u?9'qQ,"", 'anson']",8,4,4444,3000
+21,Apple M2,8 GB,BST,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,5000
+22,Apple M2,8 GB,BST,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,2000
+23,Apple M2,8 GB,BST,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,2000
+24,Apple M2,8 GB,BST,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,1000
+25,Apple M2,8 GB,BST,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,2000
+26,Apple M2,8 GB,AVL,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,8000
+27,Apple M2,8 GB,AVL,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,3000
+28,Apple M2,8 GB,AVL,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,3000
+29,Apple M2,8 GB,AVL,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,2000
+30,Apple M2,8 GB,AVL,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,3000
+31,Apple M2,8 GB,Trie,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,1000
+32,Apple M2,8 GB,Trie,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,1000
+33,Apple M2,8 GB,Trie,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,0
+34,Apple M2,8 GB,Trie,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,0
+35,Apple M2,8 GB,Trie,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,2000
+36,Apple M2,8 GB,Hash Map,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,332000
+37,Apple M2,8 GB,Hash Map,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,19000
+38,Apple M2,8 GB,Hash Map,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,12000
+39,Apple M2,8 GB,Hash Map,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,10000
+40,Apple M2,8 GB,Hash Map,"['powdered', 'rmb181 forster', '8x*', '#-iu6`$pX PAjjq<y']",70,4,4804,10000
+41,Apple M2,8 GB,BST,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,15000
+42,Apple M2,8 GB,BST,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,5000
+43,Apple M2,8 GB,BST,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,3000
+44,Apple M2,8 GB,BST,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,3000
+45,Apple M2,8 GB,BST,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,4000
+46,Apple M2,8 GB,AVL,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,836000
+47,Apple M2,8 GB,AVL,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,7000
+48,Apple M2,8 GB,AVL,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,3000
+49,Apple M2,8 GB,AVL,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,3000
+50,Apple M2,8 GB,AVL,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,3000
+51,Apple M2,8 GB,Trie,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,190000
+52,Apple M2,8 GB,Trie,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,1000
+53,Apple M2,8 GB,Trie,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,0
+54,Apple M2,8 GB,Trie,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,1000
+55,Apple M2,8 GB,Trie,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,1000
+56,Apple M2,8 GB,Hash Map,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,260000
+57,Apple M2,8 GB,Hash Map,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,19000
+58,Apple M2,8 GB,Hash Map,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,13000
+59,Apple M2,8 GB,Hash Map,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,12000
+60,Apple M2,8 GB,Hash Map,"['purchased', ""z\x0bPq^^i|'"", 'weexchange', 'j..7\rjCQUy']",4388,4,5224,12000
+61,Apple M2,8 GB,BST,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,14000
+62,Apple M2,8 GB,BST,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,4000
+63,Apple M2,8 GB,BST,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,3000
+64,Apple M2,8 GB,BST,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,3000
+65,Apple M2,8 GB,BST,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,3000
+66,Apple M2,8 GB,AVL,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,1138000
+67,Apple M2,8 GB,AVL,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,7000
+68,Apple M2,8 GB,AVL,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,4000
+69,Apple M2,8 GB,AVL,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,4000
+70,Apple M2,8 GB,AVL,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,3000
+71,Apple M2,8 GB,Trie,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,707000
+72,Apple M2,8 GB,Trie,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,2000
+73,Apple M2,8 GB,Trie,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,1000
+74,Apple M2,8 GB,Trie,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,1000
+75,Apple M2,8 GB,Trie,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,1000
+76,Apple M2,8 GB,Hash Map,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,156000
+77,Apple M2,8 GB,Hash Map,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,15000
+78,Apple M2,8 GB,Hash Map,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,15000
+79,Apple M2,8 GB,Hash Map,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,11000
+80,Apple M2,8 GB,Hash Map,"['Dx\tfRT!', 'Z?b^>FC `nR', 'antinori', 'melter fzb']",4,4,5600,11000
+81,Apple M2,8 GB,BST,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,9000
+82,Apple M2,8 GB,BST,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,4000
+83,Apple M2,8 GB,BST,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,3000
+84,Apple M2,8 GB,BST,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,3000
+85,Apple M2,8 GB,BST,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,4000
+86,Apple M2,8 GB,AVL,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,239000
+87,Apple M2,8 GB,AVL,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,5000
+88,Apple M2,8 GB,AVL,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,3000
+89,Apple M2,8 GB,AVL,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,4000
+90,Apple M2,8 GB,AVL,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,4000
+91,Apple M2,8 GB,Trie,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,257000
+92,Apple M2,8 GB,Trie,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,1000
+93,Apple M2,8 GB,Trie,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,2000
+94,Apple M2,8 GB,Trie,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,1000
+95,Apple M2,8 GB,Trie,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,0
+96,Apple M2,8 GB,Hash Map,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,5000
+97,Apple M2,8 GB,Hash Map,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,4000
+98,Apple M2,8 GB,Hash Map,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,2000
+99,Apple M2,8 GB,Hash Map,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,2000
+100,Apple M2,8 GB,Hash Map,"['WKf&O% Z%z', '_$*Z(-', "";Xc #:bb5: '~i[Uu(l 6"", 'robar']",3,4,4008,3000
+101,Apple M2,8 GB,BST,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,10000
+102,Apple M2,8 GB,BST,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,3000
+103,Apple M2,8 GB,BST,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,4000
+104,Apple M2,8 GB,BST,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,3000
+105,Apple M2,8 GB,BST,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,2000
+106,Apple M2,8 GB,AVL,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,385000
+107,Apple M2,8 GB,AVL,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,6000
+108,Apple M2,8 GB,AVL,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,4000
+109,Apple M2,8 GB,AVL,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,4000
+110,Apple M2,8 GB,AVL,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,4000
+111,Apple M2,8 GB,Trie,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,385000
+112,Apple M2,8 GB,Trie,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,1000
+113,Apple M2,8 GB,Trie,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,2000
+114,Apple M2,8 GB,Trie,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,1000
+115,Apple M2,8 GB,Trie,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,1000
+116,Apple M2,8 GB,Hash Map,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,43000
+117,Apple M2,8 GB,Hash Map,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,9000
+118,Apple M2,8 GB,Hash Map,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,7000
+119,Apple M2,8 GB,Hash Map,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,6000
+120,Apple M2,8 GB,Hash Map,"['OtE?k\x0c', 'aerogardens maxis', 'ransomware', 'costiglio']",150,4,4488,6000
+121,Apple M2,8 GB,BST,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,9000
+122,Apple M2,8 GB,BST,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+123,Apple M2,8 GB,BST,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+124,Apple M2,8 GB,BST,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+125,Apple M2,8 GB,BST,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+126,Apple M2,8 GB,AVL,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,182000
+127,Apple M2,8 GB,AVL,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,4000
+128,Apple M2,8 GB,AVL,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+129,Apple M2,8 GB,AVL,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,2000
+130,Apple M2,8 GB,AVL,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,1000
+131,Apple M2,8 GB,Trie,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,41000
+132,Apple M2,8 GB,Trie,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,1000
+133,Apple M2,8 GB,Trie,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,1000
+134,Apple M2,8 GB,Trie,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,0
+135,Apple M2,8 GB,Trie,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,1000
+136,Apple M2,8 GB,Hash Map,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,65000
+137,Apple M2,8 GB,Hash Map,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,14000
+138,Apple M2,8 GB,Hash Map,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,11000
+139,Apple M2,8 GB,Hash Map,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,11000
+140,Apple M2,8 GB,Hash Map,"['kupol', 'Bykowicz tacko darul', 'urzm(Po', 'y }nN\t. nEYJ!']",1,4,4004,11000
+141,Apple M2,8 GB,BST,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,5000
+142,Apple M2,8 GB,BST,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+143,Apple M2,8 GB,BST,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,2000
+144,Apple M2,8 GB,BST,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+145,Apple M2,8 GB,BST,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,2000
+146,Apple M2,8 GB,AVL,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,6000
+147,Apple M2,8 GB,AVL,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+148,Apple M2,8 GB,AVL,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+149,Apple M2,8 GB,AVL,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+150,Apple M2,8 GB,AVL,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,3000
+151,Apple M2,8 GB,Trie,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,36000
+152,Apple M2,8 GB,Trie,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,1000
+153,Apple M2,8 GB,Trie,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,1000
+154,Apple M2,8 GB,Trie,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,0
+155,Apple M2,8 GB,Trie,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,1000
+156,Apple M2,8 GB,Hash Map,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,82000
+157,Apple M2,8 GB,Hash Map,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,10000
+158,Apple M2,8 GB,Hash Map,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,10000
+159,Apple M2,8 GB,Hash Map,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,9000
+160,Apple M2,8 GB,Hash Map,"['hbv', 'QsfF}P#', 'briefstewardship', '[;Q.q} \x0c\r.. ~m\\;\x0bX\\L']",40,4,4808,9000
+1,Apple M2,8 GB,BST,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+2,Apple M2,8 GB,BST,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,4000
+3,Apple M2,8 GB,BST,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+4,Apple M2,8 GB,BST,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,4000
+5,Apple M2,8 GB,BST,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+6,Apple M2,8 GB,AVL,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+7,Apple M2,8 GB,AVL,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+8,Apple M2,8 GB,AVL,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+9,Apple M2,8 GB,AVL,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+10,Apple M2,8 GB,AVL,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,13000
+11,Apple M2,8 GB,Trie,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+12,Apple M2,8 GB,Trie,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,1000
+13,Apple M2,8 GB,Trie,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,2000
+14,Apple M2,8 GB,Trie,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,1000
+15,Apple M2,8 GB,Trie,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,1000
+16,Apple M2,8 GB,Hash Map,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,4000
+17,Apple M2,8 GB,Hash Map,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+18,Apple M2,8 GB,Hash Map,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+19,Apple M2,8 GB,Hash Map,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+20,Apple M2,8 GB,Hash Map,"['politico', '@', '_gpU', 'I 7bg']",0,4,4444,3000
+21,Apple M2,8 GB,BST,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,5000
+22,Apple M2,8 GB,BST,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,2000
+23,Apple M2,8 GB,BST,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,3000
+24,Apple M2,8 GB,BST,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+25,Apple M2,8 GB,BST,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+26,Apple M2,8 GB,AVL,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,9000
+27,Apple M2,8 GB,AVL,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,3000
+28,Apple M2,8 GB,AVL,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,4000
+29,Apple M2,8 GB,AVL,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,4000
+30,Apple M2,8 GB,AVL,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,2000
+31,Apple M2,8 GB,Trie,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,3000
+32,Apple M2,8 GB,Trie,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+33,Apple M2,8 GB,Trie,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+34,Apple M2,8 GB,Trie,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+35,Apple M2,8 GB,Trie,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,1000
+36,Apple M2,8 GB,Hash Map,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,5000
+37,Apple M2,8 GB,Hash Map,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,4000
+38,Apple M2,8 GB,Hash Map,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,9000
+39,Apple M2,8 GB,Hash Map,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,2000
+40,Apple M2,8 GB,Hash Map,"['1o;9&', 'pELtr', ';:MRs+{C4U', 'uey\x0c?VNkJ\t']",0,4,4804,2000
+41,Apple M2,8 GB,BST,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,9000
+42,Apple M2,8 GB,BST,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+43,Apple M2,8 GB,BST,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,14000
+44,Apple M2,8 GB,BST,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+45,Apple M2,8 GB,BST,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+46,Apple M2,8 GB,AVL,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+47,Apple M2,8 GB,AVL,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+48,Apple M2,8 GB,AVL,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,3000
+49,Apple M2,8 GB,AVL,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+50,Apple M2,8 GB,AVL,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,3000
+51,Apple M2,8 GB,Trie,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,1000
+52,Apple M2,8 GB,Trie,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,1000
+53,Apple M2,8 GB,Trie,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,1000
+54,Apple M2,8 GB,Trie,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,2000
+55,Apple M2,8 GB,Trie,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,2000
+56,Apple M2,8 GB,Hash Map,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,5000
+57,Apple M2,8 GB,Hash Map,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+58,Apple M2,8 GB,Hash Map,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,2000
+59,Apple M2,8 GB,Hash Map,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,2000
+60,Apple M2,8 GB,Hash Map,"['81_k#!S\n\x0b\t', 'vasiliki', 'J>61} [WMJ/AKF', ':XB']",0,4,5224,4000
+61,Apple M2,8 GB,BST,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,4000
+62,Apple M2,8 GB,BST,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,10000
+63,Apple M2,8 GB,BST,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,3000
+64,Apple M2,8 GB,BST,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,5000
+65,Apple M2,8 GB,BST,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,3000
+66,Apple M2,8 GB,AVL,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,22000
+67,Apple M2,8 GB,AVL,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,18000
+68,Apple M2,8 GB,AVL,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,8000
+69,Apple M2,8 GB,AVL,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,4000
+70,Apple M2,8 GB,AVL,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,9000
+71,Apple M2,8 GB,Trie,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,2000
+72,Apple M2,8 GB,Trie,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,2000
+73,Apple M2,8 GB,Trie,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,2000
+74,Apple M2,8 GB,Trie,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,0
+75,Apple M2,8 GB,Trie,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,2000
+76,Apple M2,8 GB,Hash Map,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,13000
+77,Apple M2,8 GB,Hash Map,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,3000
+78,Apple M2,8 GB,Hash Map,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,3000
+79,Apple M2,8 GB,Hash Map,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,2000
+80,Apple M2,8 GB,Hash Map,"['macom', 'hobica Shields', 'herika openbank rspo', 'coalmine']",0,4,5600,5000
+81,Apple M2,8 GB,BST,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,7000
+82,Apple M2,8 GB,BST,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,11000
+83,Apple M2,8 GB,BST,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,5000
+84,Apple M2,8 GB,BST,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,15000
+85,Apple M2,8 GB,BST,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,4000
+86,Apple M2,8 GB,AVL,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,9000
+87,Apple M2,8 GB,AVL,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,13000
+88,Apple M2,8 GB,AVL,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,4000
+89,Apple M2,8 GB,AVL,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,4000
+90,Apple M2,8 GB,AVL,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,5000
+91,Apple M2,8 GB,Trie,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,5000
+92,Apple M2,8 GB,Trie,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,23000
+93,Apple M2,8 GB,Trie,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,3000
+94,Apple M2,8 GB,Trie,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,1000
+95,Apple M2,8 GB,Trie,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,4000
+96,Apple M2,8 GB,Hash Map,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,8000
+97,Apple M2,8 GB,Hash Map,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,3000
+98,Apple M2,8 GB,Hash Map,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,4000
+99,Apple M2,8 GB,Hash Map,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,2000
+100,Apple M2,8 GB,Hash Map,"['carbine', '\n5V', 'R[TQ-', 'provinet vorlet']",0,4,4008,2000
+101,Apple M2,8 GB,BST,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,6000
+102,Apple M2,8 GB,BST,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,6000
+103,Apple M2,8 GB,BST,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,15000
+104,Apple M2,8 GB,BST,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,5000
+105,Apple M2,8 GB,BST,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,3000
+106,Apple M2,8 GB,AVL,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,4000
+107,Apple M2,8 GB,AVL,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,4000
+108,Apple M2,8 GB,AVL,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,4000
+109,Apple M2,8 GB,AVL,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,3000
+110,Apple M2,8 GB,AVL,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,3000
+111,Apple M2,8 GB,Trie,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,2000
+112,Apple M2,8 GB,Trie,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,2000
+113,Apple M2,8 GB,Trie,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,2000
+114,Apple M2,8 GB,Trie,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,0
+115,Apple M2,8 GB,Trie,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,2000
+116,Apple M2,8 GB,Hash Map,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,3000
+117,Apple M2,8 GB,Hash Map,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,1000
+118,Apple M2,8 GB,Hash Map,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,6000
+119,Apple M2,8 GB,Hash Map,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,3000
+120,Apple M2,8 GB,Hash Map,"['area1 briefnevro bpy', 'tengo', 'pokhran', '1loh montoni spoonable']",0,4,4488,2000
+121,Apple M2,8 GB,BST,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,8000
+122,Apple M2,8 GB,BST,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,4000
+123,Apple M2,8 GB,BST,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,3000
+124,Apple M2,8 GB,BST,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,3000
+125,Apple M2,8 GB,BST,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,3000
+126,Apple M2,8 GB,AVL,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,5000
+127,Apple M2,8 GB,AVL,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,3000
+128,Apple M2,8 GB,AVL,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,6000
+129,Apple M2,8 GB,AVL,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,2000
+130,Apple M2,8 GB,AVL,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,4000
+131,Apple M2,8 GB,Trie,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,11000
+132,Apple M2,8 GB,Trie,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,2000
+133,Apple M2,8 GB,Trie,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,0
+134,Apple M2,8 GB,Trie,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,1000
+135,Apple M2,8 GB,Trie,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,2000
+136,Apple M2,8 GB,Hash Map,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,4000
+137,Apple M2,8 GB,Hash Map,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,3000
+138,Apple M2,8 GB,Hash Map,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,2000
+139,Apple M2,8 GB,Hash Map,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,11000
+140,Apple M2,8 GB,Hash Map,"['andelskassers', 'jaiku', '\n^K:', 'e<s.;-GR""']",0,4,4004,4000
+141,Apple M2,8 GB,BST,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,7000
+142,Apple M2,8 GB,BST,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+143,Apple M2,8 GB,BST,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,9000
+144,Apple M2,8 GB,BST,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+145,Apple M2,8 GB,BST,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+146,Apple M2,8 GB,AVL,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,9000
+147,Apple M2,8 GB,AVL,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,7000
+148,Apple M2,8 GB,AVL,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+149,Apple M2,8 GB,AVL,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+150,Apple M2,8 GB,AVL,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+151,Apple M2,8 GB,Trie,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,7000
+152,Apple M2,8 GB,Trie,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,1000
+153,Apple M2,8 GB,Trie,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,1000
+154,Apple M2,8 GB,Trie,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,2000
+155,Apple M2,8 GB,Trie,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,2000
+156,Apple M2,8 GB,Hash Map,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,4000
+157,Apple M2,8 GB,Hash Map,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+158,Apple M2,8 GB,Hash Map,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,4000
+159,Apple M2,8 GB,Hash Map,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,3000
+160,Apple M2,8 GB,Hash Map,"['8Y)Sec7', '*f\\"" 6),f', 'emmerson phony', 'ueli']",0,4,4808,2000
+1,Apple M3,16 GB,BST,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,30000
+2,Apple M3,16 GB,BST,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,10000
+3,Apple M3,16 GB,BST,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,9000
+4,Apple M3,16 GB,BST,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,8000
+5,Apple M3,16 GB,BST,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,8000
+6,Apple M3,16 GB,AVL,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,64000
+7,Apple M3,16 GB,AVL,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,16000
+8,Apple M3,16 GB,AVL,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,16000
+9,Apple M3,16 GB,AVL,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,15000
+10,Apple M3,16 GB,AVL,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,14000
+11,Apple M3,16 GB,Trie,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,26000
+12,Apple M3,16 GB,Trie,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,2000
+13,Apple M3,16 GB,Trie,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,6000
+14,Apple M3,16 GB,Trie,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,4000
+15,Apple M3,16 GB,Trie,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,3000
+16,Apple M3,16 GB,Hash Map,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,38000
+17,Apple M3,16 GB,Hash Map,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,9000
+18,Apple M3,16 GB,Hash Map,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,9000
+19,Apple M3,16 GB,Hash Map,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,10000
+20,Apple M3,16 GB,Hash Map,"['(a-/D', ""uk R \nFz'>)"", 'j:F^m', 'anterolateral']",0,4,4444,10000
+21,Apple M3,16 GB,BST,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,14000
+22,Apple M3,16 GB,BST,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,10000
+23,Apple M3,16 GB,BST,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,37000
+24,Apple M3,16 GB,BST,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,17000
+25,Apple M3,16 GB,BST,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,14000
+26,Apple M3,16 GB,AVL,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,38000
+27,Apple M3,16 GB,AVL,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,20000
+28,Apple M3,16 GB,AVL,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,16000
+29,Apple M3,16 GB,AVL,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,16000
+30,Apple M3,16 GB,AVL,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,16000
+31,Apple M3,16 GB,Trie,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,20000
+32,Apple M3,16 GB,Trie,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,7000
+33,Apple M3,16 GB,Trie,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,8000
+34,Apple M3,16 GB,Trie,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,7000
+35,Apple M3,16 GB,Trie,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,5000
+36,Apple M3,16 GB,Hash Map,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,23000
+37,Apple M3,16 GB,Hash Map,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,12000
+38,Apple M3,16 GB,Hash Map,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,11000
+39,Apple M3,16 GB,Hash Map,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,12000
+40,Apple M3,16 GB,Hash Map,"['us111', 'tengelmann', 'R) 5>', 'lGK']",0,4,4804,10000
+41,Apple M3,16 GB,BST,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,20000
+42,Apple M3,16 GB,BST,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,15000
+43,Apple M3,16 GB,BST,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,13000
+44,Apple M3,16 GB,BST,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,11000
+45,Apple M3,16 GB,BST,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,10000
+46,Apple M3,16 GB,AVL,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,25000
+47,Apple M3,16 GB,AVL,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,18000
+48,Apple M3,16 GB,AVL,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,14000
+49,Apple M3,16 GB,AVL,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,14000
+50,Apple M3,16 GB,AVL,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,14000
+51,Apple M3,16 GB,Trie,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,24000
+52,Apple M3,16 GB,Trie,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,8000
+53,Apple M3,16 GB,Trie,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,7000
+54,Apple M3,16 GB,Trie,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,3000
+55,Apple M3,16 GB,Trie,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,7000
+56,Apple M3,16 GB,Hash Map,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,16000
+57,Apple M3,16 GB,Hash Map,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,11000
+58,Apple M3,16 GB,Hash Map,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,11000
+59,Apple M3,16 GB,Hash Map,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,10000
+60,Apple M3,16 GB,Hash Map,"['bowstring enterome karamoh', 'palmerino', '*', ' 8:']",0,4,5224,12000
+61,Apple M3,16 GB,BST,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,20000
+62,Apple M3,16 GB,BST,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,16000
+63,Apple M3,16 GB,BST,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,15000
+64,Apple M3,16 GB,BST,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,11000
+65,Apple M3,16 GB,BST,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,12000
+66,Apple M3,16 GB,AVL,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,17000
+67,Apple M3,16 GB,AVL,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,14000
+68,Apple M3,16 GB,AVL,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,11000
+69,Apple M3,16 GB,AVL,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,11000
+70,Apple M3,16 GB,AVL,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,11000
+71,Apple M3,16 GB,Trie,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,10000
+72,Apple M3,16 GB,Trie,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,5000
+73,Apple M3,16 GB,Trie,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,5000
+74,Apple M3,16 GB,Trie,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,6000
+75,Apple M3,16 GB,Trie,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,7000
+76,Apple M3,16 GB,Hash Map,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,16000
+77,Apple M3,16 GB,Hash Map,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,13000
+78,Apple M3,16 GB,Hash Map,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,14000
+79,Apple M3,16 GB,Hash Map,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,12000
+80,Apple M3,16 GB,Hash Map,"[' \\e\r', '}vK""1d4', 'faafp', '{W5 x`A"",j5D']",0,4,5600,13000
+81,Apple M3,16 GB,BST,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,23000
+82,Apple M3,16 GB,BST,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,18000
+83,Apple M3,16 GB,BST,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,15000
+84,Apple M3,16 GB,BST,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,15000
+85,Apple M3,16 GB,BST,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,13000
+86,Apple M3,16 GB,AVL,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,29000
+87,Apple M3,16 GB,AVL,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,17000
+88,Apple M3,16 GB,AVL,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,17000
+89,Apple M3,16 GB,AVL,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,16000
+90,Apple M3,16 GB,AVL,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,15000
+91,Apple M3,16 GB,Trie,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,24000
+92,Apple M3,16 GB,Trie,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,8000
+93,Apple M3,16 GB,Trie,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,7000
+94,Apple M3,16 GB,Trie,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,7000
+95,Apple M3,16 GB,Trie,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,6000
+96,Apple M3,16 GB,Hash Map,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,16000
+97,Apple M3,16 GB,Hash Map,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,12000
+98,Apple M3,16 GB,Hash Map,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,11000
+99,Apple M3,16 GB,Hash Map,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,12000
+100,Apple M3,16 GB,Hash Map,"['shiprock', 'decision’', 'demizine', 'cmo']",0,4,4008,32000
+101,Apple M3,16 GB,BST,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,24000
+102,Apple M3,16 GB,BST,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,13000
+103,Apple M3,16 GB,BST,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,13000
+104,Apple M3,16 GB,BST,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,14000
+105,Apple M3,16 GB,BST,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,12000
+106,Apple M3,16 GB,AVL,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,28000
+107,Apple M3,16 GB,AVL,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,13000
+108,Apple M3,16 GB,AVL,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,12000
+109,Apple M3,16 GB,AVL,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,11000
+110,Apple M3,16 GB,AVL,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,15000
+111,Apple M3,16 GB,Trie,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,25000
+112,Apple M3,16 GB,Trie,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,5000
+113,Apple M3,16 GB,Trie,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,6000
+114,Apple M3,16 GB,Trie,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,5000
+115,Apple M3,16 GB,Trie,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,3000
+116,Apple M3,16 GB,Hash Map,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,17000
+117,Apple M3,16 GB,Hash Map,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,8000
+118,Apple M3,16 GB,Hash Map,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,10000
+119,Apple M3,16 GB,Hash Map,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,9000
+120,Apple M3,16 GB,Hash Map,"['yE;tFA&i{', 'gyeong okcupid', '1#Ts~2p', ""~4_(Cm'$""]",0,4,4488,16000
+121,Apple M3,16 GB,BST,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,35000
+122,Apple M3,16 GB,BST,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,15000
+123,Apple M3,16 GB,BST,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,13000
+124,Apple M3,16 GB,BST,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,13000
+125,Apple M3,16 GB,BST,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,14000
+126,Apple M3,16 GB,AVL,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,38000
+127,Apple M3,16 GB,AVL,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,16000
+128,Apple M3,16 GB,AVL,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,13000
+129,Apple M3,16 GB,AVL,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,13000
+130,Apple M3,16 GB,AVL,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,14000
+131,Apple M3,16 GB,Trie,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,26000
+132,Apple M3,16 GB,Trie,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,4000
+133,Apple M3,16 GB,Trie,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,6000
+134,Apple M3,16 GB,Trie,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,6000
+135,Apple M3,16 GB,Trie,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,3000
+136,Apple M3,16 GB,Hash Map,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,13000
+137,Apple M3,16 GB,Hash Map,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,11000
+138,Apple M3,16 GB,Hash Map,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,9000
+139,Apple M3,16 GB,Hash Map,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,11000
+140,Apple M3,16 GB,Hash Map,"['stomachchurning', 'rarnational', 'skybet', 'boewatch']",0,4,4004,9000
+141,Apple M3,16 GB,BST,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,32000
+142,Apple M3,16 GB,BST,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,18000
+143,Apple M3,16 GB,BST,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,14000
+144,Apple M3,16 GB,BST,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,13000
+145,Apple M3,16 GB,BST,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,12000
+146,Apple M3,16 GB,AVL,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,32000
+147,Apple M3,16 GB,AVL,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,16000
+148,Apple M3,16 GB,AVL,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,16000
+149,Apple M3,16 GB,AVL,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,15000
+150,Apple M3,16 GB,AVL,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,14000
+151,Apple M3,16 GB,Trie,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,19000
+152,Apple M3,16 GB,Trie,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,8000
+153,Apple M3,16 GB,Trie,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,4000
+154,Apple M3,16 GB,Trie,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,21000
+155,Apple M3,16 GB,Trie,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,7000
+156,Apple M3,16 GB,Hash Map,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,23000
+157,Apple M3,16 GB,Hash Map,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,12000
+158,Apple M3,16 GB,Hash Map,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,10000
+159,Apple M3,16 GB,Hash Map,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,10000
+160,Apple M3,16 GB,Hash Map,"['zavadovskaya', 'dunaujvaros', 'beeb', 'jakes']",0,4,4808,10000
