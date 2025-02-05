@@ -28,7 +28,7 @@ practical-01-ruchidhiyanka/
 │   │   ├── nltk_modules.py
 │   │   ├── parser_utils.py
 │   │   ├── timer.py
-│   ├── abstract_index.py/
+│   ├── abstract_index.py
 │── timing_data/
 │   │   ├── timing_data.csv
 │── search_results/
@@ -46,7 +46,7 @@ practical-01-ruchidhiyanka/
 ## Execution Instructions
 
 1. **Set the Data Directory**
-   Update the `data_directory` variable in `main()` with the absolute path to the dataset folder containing preprocessed JSON articles.
+   Update the `data_directory` variable in `main()` of `assign_01.py` with the absolute path to the dataset folder containing preprocessed JSON articles.
 
 2. **Run the Program**
    Execute the script from the terminal:
@@ -65,5 +65,5 @@ practical-01-ruchidhiyanka/
 - **Generated Datasets**: `datasets.pkl` (pickled test datasets)
 
 ## Notes
-- Modify `data_structures` in `main()` to experiment with different index types.
+- Modify `data_structures` in `main()` of `assign_01.py` to experiment with different index types.
 
