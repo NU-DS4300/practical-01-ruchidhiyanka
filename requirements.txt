@@ -9,3 +9,5 @@ hashlib
 argparse
 typing
 time
+jupyter
+jupyterlab
