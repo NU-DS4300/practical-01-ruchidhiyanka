@@ -10,6 +10,8 @@ import string
 import os
 import pickle
 import csv
+import argparse
+
 
 DATASET_PICKLE_FILE = "datasets.pkl"
 TIMING_CSV_FILE = "timing_data/timing_data.csv"
@@ -35,8 +37,8 @@ def index_files(path: str, index: AbstractIndex) -> None:
     for folder in os.listdir(path):
         folder_path = os.path.join(path, folder)
         if os.path.isdir(folder_path):
-            for file_name in os.listdir(path):
-                file_path = os.path.join(path, file_name)
+            for file_name in os.listdir(folder_path):
+                file_path = os.path.join(folder_path, file_name)
                 # skip over hidden, non-json file in folder called ".DS_Store"
                 if os.path.isfile(file_path) and ".DS_Store" not in file_path:
                     with open(file_path, 'r') as f:
@@ -99,23 +101,31 @@ def search_dataset(term, index_type):
     return index_type.search(term)
 
 timed_results = {}
-def experiment_run(index_type, datasets):
-    i = 1
-    for dataset in datasets:
-        search_terms = random.sample(dataset, 4)
-        for idx, word in enumerate(dataset):
-            index_type.insert(word, idx)
+def experiment_runs(data_structures, datasets, n_ls, COMPUTE_PROC_TYPE,PRIMARY_MEMORY_SIZE):
+    csv_rows = []
+    search_times = []
+    run_id = 1
 
-        results = []
-        for term in search_terms:
-            total_time = 0
-            for test in range(6):
-                result, time_ns = search_dataset(term, index_type)
-                total_time += time_ns
-            results.append((total_time/5))
-        timed_results[f'dataset_{i}'] = results
-        i += 1
-    return timed_results
+    # loop through each dataset (x8), each data structure (x4) for 5 iterations each (x5) = 160 rows
+    for id, dataset in enumerate(datasets):
+        search_terms = random.sample(dataset, 4)
+        for index_name, index in data_structures.items():
+            for i in range(5):
+                total_time = 0
+                doc_results = set()
+                for term in search_terms:
+                    result, time_ns = search_dataset(term, index)
+                    total_time += time_ns
+                    doc_results.update(result)
+                search_times.append(total_time)
+
+                csv_rows.append([
+                    run_id, COMPUTE_PROC_TYPE, PRIMARY_MEMORY_SIZE, index_name, search_terms,
+                    len(doc_results), len(search_terms), n_ls[id], total_time])
+                run_id += 1
+
+    
+    return csv_rows
 
 def write_csv(data, filename=TIMING_CSV_FILE):
     file_exists = os.path.exists(filename)
@@ -124,48 +134,54 @@ def write_csv(data, filename=TIMING_CSV_FILE):
         writer = csv.writer(f)
         if not file_exists:
             writer.writerow([
-                "run_id", "compute_proc_type", "primary_memory_size", "index_type",
+                "run_id", "compute_proc_type", "primary_memory_size", "index_type", "term",
                 "num_docs_indexed", "num_tokens_indexed", "search_set_base_size", "search_time"
             ])
         writer.writerows(data)
 
 def main():
+    # Parse command-line arguments
+    # parser = argparse.ArgumentParser(description="Index files and run search experiments.")
+    # parser.add_argument("-d", "--dataset", required=True, help="Path to the dataset directory")
+    # args = parser.parse_args()
     # change to command line
-    data_directory = "/Users/nidhibendre/Documents/ds4300/practical-01-ruchidhiyanka/data/P01-verify-dataset"
+    #data_directory = args.dataset
+    data_directory = "/Users/priyankaadhikari/Documents/ds4300/practical-01-ruchidhiyanka/USFinancialNewsArticles-preprocessed"
 
+    # index data into all structures
+    bst_index = BinarySearchTreeIndex()
+    index_files(data_directory, bst_index)
+    print("BST done indexing")
+    avl_index = AVLTreeIndex()
+    index_files(data_directory, avl_index)
+    print("AVL done indexing")
+    trie_index = TrieIndex()
+    index_files(data_directory, trie_index)
+    print("Trie done indexing")
+    hash_map_index = HashMapIndex()
+    index_files(data_directory, hash_map_index)
+    print("Hashmap done indexing")
 
-    # bst_index = BinarySearchTreeIndex()
-    # index_files(data_directory, bst_index)
-    #print(bst_index.get_keys_in_order())
+    # load datasets
+    datasets = load_datasets()
+    n_ls = [4444, 4804, 5224, 5600, 4008, 4488, 4004, 4808]
+    indexed_terms = bst_index.get_keys_in_order()
+    if datasets is None:
+        datasets = [generate_dataset(indexed_terms, size) for size in n_ls]
+        save_datasets(datasets)
+    data_structures = {'BST': bst_index, 'AVL': avl_index,
+                       'Trie': trie_index, 'Hash Map': hash_map_index}
+    print("Datasets loaded")
+    specified_search_terms = ['Northeastern', 'Beanpot', 'Husky']
+    specified_search_terms_documents = dict()
+    for structure in data_structures:
+        for term in specified_search_terms:
+            docs = data_structures[structure].search(term)
+            specified_search_terms_documents[structure] = docs
+    print(specified_search_terms_documents)
 
-    #avl
-    # print('avl')
-    # avl_index = AVLTreeIndex()
-    # index_files(data_directory, avl_index)
-    #print(avl_index.get_keys_in_order())
-
-     # trie
-    # trie_index = TrieIndex()
-    # index_files(data_directory, trie_index)
-    #indexed_terms = bst_index.get_keys_in_order()
-    # print(trie_index.get_keys_in_order())
-
-
-    # # hashmap
-    # hash_map_index = HashMapIndex()
-    # index_files(data_directory, hash_map_index)
-    # print(hash_map_index.print_hashmap())
-
-    # datasets = load_datasets()
-    # n_ls = [4444, 4804, 5224, 5600, 4008, 4488, 4004, 4808]
-    # if datasets is None:
-    #  datasets = [generate_dataset(indexed_terms, size) for size in n_ls]
-    #  save_datasets(datasets)
-    # data_structures = {'BST': BinarySearchTreeIndex(), 'AVL': AVLTreeIndex()}
-    #
-    #
-    # csv_data, search_results = experiment_run(data_structures, datasets)
-    # write_csv(csv_data)
+    csv_data = experiment_runs(data_structures, datasets, n_ls, 'Apple M3', '16 GB')
+    write_csv(csv_data)
 
 if __name__ == "__main__":
     main()
