@@ -55,7 +55,7 @@ practical-01-ruchidhiyanka/
    ```
    
 3. **Indexing and Searching**
-   - The script will index words from the dataset into the selected data structures (Trie, BST, AVL Tree).
+   - The script will index words from the dataset into the selected data structures (BST, AVL Tree, Hashmap, and Trie Tree).
    - It will generate search datasets and run experiments to measure the time it takes to search for the tokens from the test datasets.
    - Results will be saved in CSV files under `timing_data/`.
 
